@@ -3,6 +3,12 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Login from "./Login";
 import Signup from "./SignUp";
+import AddRoute from "./Admin/AddRoute";
+import DeleteRoute from "./Admin/DeleteRoute";
+import AddStation from "./Admin/AddStation";
+import AddBus from "./Admin/AddBus";
+import DeleteBus from "./Admin/DeleteBus";
+
 function Navbar() {
   var navigate = useNavigate();
 
@@ -32,18 +38,17 @@ function Navbar() {
                 </a>
               </li>
             </Link>
-            <Link to="/mineQuotes">
+            <Link to="/deletebus">
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  My Quotes
-                </a>
+                Delete Bus</a>
               </li>
             </Link>
 
-            <Link to="/myQuotes">
+            <Link to="/addroute">
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  All Quotes
+                 Add Route
                 </a>
               </li>
             </Link>
@@ -77,6 +82,10 @@ function Navbar() {
       <Routes>
         <Route exact path="/" Component={Login}></Route>
         <Route exact path="/register" Component={Signup}></Route>
+        <Route exact path="/addroute" Component={AddRoute}></Route>
+        <Route exact path="/deletebus" Component={DeleteBus}></Route>
+
+
         {/* <Route exact path="/myQuotes" Component={myQuotes}></Route>
         <Route exact path="/addquote" Component={AddQuote}></Route>
         <Route exact path="/mineQuotes" Component={MineQuotes}></Route>
