@@ -8,12 +8,15 @@ import DeleteRoute from "./Admin/DeleteRoute";
 import AddStation from "./Admin/AddStation";
 import AddBus from "./Admin/AddBus";
 import DeleteBus from "./Admin/DeleteBus";
+import UserHome from "./UserHome"
 
 function Navbar() {
   var navigate = useNavigate();
 
   return (
-    <div>
+    <div
+      
+    >
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
           PARV BUSES
@@ -71,19 +74,33 @@ function Navbar() {
           <form class="form-inline my-2 my-lg-0">
             <button
 
-              class="btn btn-outline-danger my-2 my-sm-0"
+              class="btn btn-outline-success my-2 my-sm-0"
               type="submit">
-              Log Out
+              LogIn
             </button>
           </form>
+
+          <li class="nav-item dropdown" style={{listStyle:"none"}}>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">My Profile</a>
+          <a class="dropdown-item" href="#">Change Password</a>
+          {/* <div class="dropdown-divider"></div> */}
+          <a class="dropdown-item" href="#">Logout</a>
+        </div>
+      </li>
+
         </div>
       </nav>
 
       <Routes>
-        <Route exact path="/" Component={Login}></Route>
+        <Route exact path="/" Component={UserHome}></Route>
         <Route exact path="/register" Component={Signup}></Route>
         <Route exact path="/addroute" Component={AddRoute}></Route>
         <Route exact path="/deletebus" Component={DeleteBus}></Route>
+        <Route exact path="/login" Component={Login}></Route>
 
 
         {/* <Route exact path="/myQuotes" Component={myQuotes}></Route>

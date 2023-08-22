@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './component/Footer';
 import Navbar from './component/Navbar';
 import Passenger from './component/PassengerDetails';
 import Profile from './component/ProfilePage';
@@ -9,7 +10,10 @@ function App() {
     <div className="App">
       {/* <Navbar></Navbar> */}
       {/* <Passenger></Passenger> */}
-      <Profile></Profile>
+      {/* <Profile></Profile> */}
+
+      <Navbar/>
+      {/* <Footer/> */}
     </div>
   );
 }
